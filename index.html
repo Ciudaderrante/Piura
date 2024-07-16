@@ -4,80 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piura, La ciudad errante</title>
-    <style>
-        body {
-            background-color: #8DC5CD;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        .content {
-            display: flex;
-            flex: 1;
+<style>
+    body {
+        background-color: #8DC5CD;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .content {
+        display: flex;
+        flex-wrap: wrap; /* Asegura que los elementos internos se envuelvan correctamente */
+        justify-content: space-between; /* Espaciado entre los elementos internos */
+    }
+
+    main {
+        flex: 3;
+        padding: 20px;
+        box-sizing: border-box; /* Incluye el padding en el ancho total */
+    }
+
+    aside {
+        flex: 1;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-sizing: border-box; /* Incluye el padding en el ancho total */
+    }
+
+    header, footer, section, article {
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-sizing: border-box; /* Incluye el padding en el ancho total */
+    }
+
+    h1, h2, h3, h4 {
+        color: #FFFFFF;
+    }
+
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+
+    a:visited {
+        color: white;
+    }
+
+    a:hover {
+        color: #CCCCCC;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    nav {
+        background-color: #000000B3;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 20px;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+
+    nav a:hover {
+        background-color: #FFFFFF33;
+    }
+
+    /* Media Queries para tamaños específicos de pantalla */
+    @media (max-width: 768px) {
+        /* Estilos específicos para dispositivos móviles y tablets */
+        main {
+            flex: 1; /* Ocupa todo el ancho disponible */
         }
 
-        main {
-            flex: 3;
-            padding: 20px;
-        }
         aside {
-            flex: 1;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
+            flex: 1; /* Ocupa todo el ancho disponible */
         }
-        header, footer, section, article {
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        h1, h2 {
-            color: #FFFFFF;
-        }
-        a {
-            color: white;
-            text-decoration: underline;
-        }
-        a:visited {
-            color: white;
-        }
-        a:hover {
-            color: #CCCCCC;
-        }
-        footer {
-            text-align: center;
-        }
-            nav {
-            background-color: #000000B3;
-            padding: 10px;
-            border-radius: 10px;
-            margin: 20px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: space-around;
-        }
-        nav ul li {
-            margin: 0 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-        }
-        nav a:hover {
-            background-color: #FFFFFF33;
-    </style>
+    }
+</style>
 </head>
 <body>
 
@@ -133,16 +163,16 @@ Gastronomía: La comida piurana es deliciosa y variada. Platos como el ceviche d
             <section class="visitor-form">
             <h4>formulario</h4>
             <form action="/submit" method="post">
-        	<label for="name">Nombre Completo:</label>
-        	<input type="text" id="name" name="name" required>
-        	<br>
-        	<br>
-        	<label for="email">Correo Electronico:</label>
-        	<input type="email" id="email" name="email" required>
-        	<br>
-        	<br>
-        	<label for="comments">Comentarios:</label>
-        	<textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            <label for="name">Nombre Completo:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <br>
+            <label for="email">Correo Electronico:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <br>
+            <label for="comments">Comentarios:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
             <button type="submit">Enviar</button>
             </form>
             </section>
